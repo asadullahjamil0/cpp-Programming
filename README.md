@@ -1,5 +1,5 @@
 # Functions-in-c-
-In this file we discussed functions including Call by value functions,Call by Reference and recursive functions
+In this file we discussed functions including Call by value functions,Call by Reference and recursive functions and others
 #include <iostream>
 
 // Functions call by value not variables
