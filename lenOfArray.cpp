@@ -19,7 +19,14 @@ int main()
     int length = strlen(name);
 
     cout << "The length of the name is: " << length << endl;
-   
-    
+    for (int i = 0; i < length / 2; i++)
+    {
+        char temp = name[i];
+        name[i] = name[length - 1 - i];
+        name[length - 1 - i] = temp;
+    }
+
+    cout << "Your reversed name is: " << name << endl;
+
     return 0;
 }
