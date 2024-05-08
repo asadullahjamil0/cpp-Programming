@@ -24,7 +24,7 @@ void reverse(char[], int)
         name[i] = name[length - 1 - i];
         name[length - 1 - i] = temp;
     }
-    cout << "Your reversed name is: " << name << endl;
+    cout << "Your Reversed name will be show as like this: " << name << endl;
 }
 int main()
 {
