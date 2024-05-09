@@ -27,5 +27,25 @@ int main()
         return 1;
     }
 
-    
+    switch (op)
+    {
+    case '+':
+        result = num1 + num2;
+        break;
+    case '-':
+        result = num1 - num2;
+        break;
+    case '/':
+        result = num1 / num2;
+        break;
+    case '*':
+        result = num1 * num2;
+        break;
+
+    default:
+        cout << "Invalid Operator!" << endl;
+        return 1;
+    }
+
+    cout << "Your expected result is: " << result << endl;
 }
