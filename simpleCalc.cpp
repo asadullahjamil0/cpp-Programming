@@ -4,7 +4,7 @@
 using namespace std;
 
 double inputTrue(double num2, char op)
-// I used call by value function as it is easy of use for me
+// I used call by value function as it is easy for use for me
 {
     if ((op == '/' || op == '%') && num2 == 0)
     {
