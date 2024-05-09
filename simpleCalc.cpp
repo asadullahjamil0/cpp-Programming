@@ -22,5 +22,10 @@ int main()
     cout << "Enter Number 2: ";
     cin >> num2;
 
+    if (!inputTrue(num2, op))
+    {
+        return 1;
+    }
+
     
 }
