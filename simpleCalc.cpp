@@ -4,6 +4,7 @@
 using namespace std;
 
 double inputTrue(double num2, char op)
+// I used call by value function as it is easy of use for me
 {
     if ((op == '/' || op == '%') && num2 == 0)
     {
@@ -15,6 +16,7 @@ int main()
 {
     double num1, num2, result;
     char op;
+    // Declared Variables to get input from user
     cout << "Enter Number 1: ";
     cin >> num1;
     cout << "Enter Operator (+, -, /, *): ";
@@ -22,11 +24,13 @@ int main()
     cout << "Enter Number 2: ";
     cin >> num2;
 
+    // Now checking the function if input is valid or not
     if (!inputTrue(num2, op))
     {
         return 1;
     }
 
+    // Now using switch statement to do different calculation operations
     switch (op)
     {
     case '+':
@@ -47,5 +51,6 @@ int main()
         return 1;
     }
 
+    //Showing the final result on screen to user
     cout << "Your expected result is: " << result << endl;
 }
