@@ -1,4 +1,5 @@
 #include <iostream>
+#include <conio.h>
 using namespace std;
 
 bool gameOver;
@@ -41,8 +42,20 @@ void Draw()
             if (j == 0)
             {
                 cout << "#";
-                cout << "";
             }
+            if (i == y && j == x)
+            {
+                cout << "0";
+            }
+            else if (i == fruitY && j == fruitX)
+            {
+                cout << "F";
+            }
+            else
+            {
+                cout << " ";
+            }
+
             if (j == width - 1)
             {
                 cout << "#";
@@ -51,7 +64,7 @@ void Draw()
         }
     }
 
-    for (int i = 0; i < width +2; i++)
+    for (int i = 0; i < width + 2; i++)
     {
         cout << "#";
     }
@@ -59,9 +72,41 @@ void Draw()
 }
 void Input()
 {
+    if (_kbhit())
+    {
+        switch (_getch())
+        {
+        case 'a':
+            dir = LEFT;
+            break;
+        case 'd':
+            dir = RIGHT;
+            break;
+        case 'w':
+            dir = UP;
+            break;
+        case 's':
+            dir = DOWN;
+            break;
+        case 'x':
+            gameOver = true;
+            break;
+        default:
+            break;
+        }
+    }
 }
 void Logic()
 {
+    switch (dir)
+    {
+    case STOP:
+        
+        break;
+    
+    default:
+        break;
+    }
 }
 
 int main()
