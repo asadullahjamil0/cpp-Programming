@@ -2,6 +2,7 @@
 #include <conio.h>
 using namespace std;
 
+// declaring variables..
 bool gameOver;
 const int width = 20;
 const int height = 20;
