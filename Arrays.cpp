@@ -16,9 +16,10 @@ int main()
     cout << mathMarks[1] << endl;
     cout << mathMarks[2] << endl;
     cout << mathMarks[3] << endl;
-    cout << "these are marks" << endl;
 
     // You can change the value of
+    cout << "these are marks" << endl;
+
     marks[0] = 234;
     cout << marks[0] << endl;
     cout << marks[1] << endl;
