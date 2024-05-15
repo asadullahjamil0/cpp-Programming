@@ -16,7 +16,15 @@ int main()
             cin >> a[row][col];
         }
     }
-    
+    cout << "The original matrix is: " << endl;
+    for (row = 0; row < maxRows; row++)
+    {
+        for (col = 0; col < maxCols; col++)
+        {
+            cout << a[row][col] << '\t';
+        }
+        cout << endl;
+    }
 
     return 0;
 }
