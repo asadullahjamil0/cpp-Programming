@@ -37,5 +37,16 @@ int main()
         cout << endl;
     }
 
+    // for reverse columns matrix
+    cout << "The reverse column matrix is: " << endl;
+    for (row = 0; row < maxRows; row++)
+    {
+        for (col = maxCols - 1; col >= 0; col--)
+        {
+            cout << a[row][col] << '\t';
+        }
+        cout << endl;
+    }
+
     return 0;
 }
