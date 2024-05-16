@@ -26,5 +26,16 @@ int main()
         cout << endl;
     }
 
+    // For reverse row matrix
+    cout << "The reeverse row matrix is: " << endl;
+    for (row = maxRows - 1; row >= 0; row--)
+    {
+        for (col = 0; col < maxCols; col++)
+        {
+            cout << a[row][col] << '\t';
+        }
+        cout << endl;
+    }
+
     return 0;
 }
