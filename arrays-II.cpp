@@ -16,6 +16,7 @@ int main()
             cin >> a[row][col];
         }
     }
+    // this is original matrix
     cout << "The original matrix is: " << endl;
     for (row = 0; row < maxRows; row++)
     {
