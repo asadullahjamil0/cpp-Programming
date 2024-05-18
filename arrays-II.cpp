@@ -60,16 +60,27 @@ int main()
         cout << endl;
     }
 
-    
     int transposed[maxRows][maxCols];
     for (row = 0; row < maxRows; row++)
     {
         for (col = 0; col < maxCols; col++)
         {
-            transposed[row][col] = a[row][col];
+            transposed[col][row] = a[row][col];
         }
     }
 
+    // Transposed matrix
+
+    cout << "The transposed matrix is: " << endl;
+
+    for (row = 0; row < maxCols; row++)
+    {
+        for (col = 0; col < maxRows; col++)
+        {
+            cout << transposed[row][col] << '\t';
+        }
+        cout << endl;
+    }
 
     return 0;
 }
