@@ -60,5 +60,16 @@ int main()
         cout << endl;
     }
 
+    
+    int transposed[maxRows][maxCols];
+    for (row = 0; row < maxRows; row++)
+    {
+        for (col = 0; col < maxCols; col++)
+        {
+            transposed[row][col] = a[row][col];
+        }
+    }
+
+
     return 0;
 }
