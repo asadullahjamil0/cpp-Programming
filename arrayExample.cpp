@@ -9,10 +9,8 @@ void getInput(int[][2], int numEps)
 {
     for ( i = 0; i < numEps; i++)
     {
-        cin>>sal[i][o];
+        cin>>sal[i][0];
     }
-    
-
 }
 int main()
 {
