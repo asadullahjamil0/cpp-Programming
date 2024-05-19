@@ -4,6 +4,7 @@ using namespace std;
 
 void getInput(double sal[][2], int numEps);
 void calNetSal(double sal[][2], int numEps);
+void findUnluckies(double sal[][2],int numEps,int lucky[]);
 
 int main()
 {
@@ -56,4 +57,9 @@ void calNetSal(double sal[][2], int numEps)
     {
         /*Nothing to do here*/
     }
+}
+
+void findUnluckies(double sal[][2],int numEps,int luck[]);
+{
+
 }
