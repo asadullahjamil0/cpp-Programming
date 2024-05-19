@@ -2,20 +2,24 @@
 
 using namespace std;
 
-int numEmps;
-cout << "Enter the number of employees: ";
-cin >> numEmps;
-void getInput(int[][2], int numEps)
-{
-    for ( i = 0; i < numEps; i++)
-    {
-        cin>>sal[i][0];
-    }
-}
+void getInput(double sal[][2], int numEps);
+
 int main()
 {
     const int arraySize = 100;
-    int sal[arraySize][2];
+    double sal[arraySize][2];
     int lucky[arraySize] = {0};
-    getInput(sal, numEmps); 
+    int numEmps;
+    cout << "Enter the number of employees in the company: ";
+    cin >> numEmps;
+    cout << '/n';
+    getInput(sal, numEmps);
+}
+
+void getInput(double sal[][2], int numEps)
+{
+    for (i = 0; i < numEps; i++)
+    {
+        cin >> sal[i][0];
+    }
 }
