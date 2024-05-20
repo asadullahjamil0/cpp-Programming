@@ -23,6 +23,10 @@ int main()
     // Calculate the net salary of emoloyees and store them in the array
     cout << "\n\ncalculating the net salaries...";
     calNetSal(sal, numEmps);
+
+    // Find the unlucky employees
+    cout << "\n\n Loading the unlucky employee...";
+    findUnluckies(sal, numEps, lucky);
 }
 
 void getInput(double sal[][2], int numEps)
@@ -69,12 +73,21 @@ void findUnluckies(double sal[][2], int numEps, int luck[]);
 {
     for (int i = 0; i < numEps; i++)
     {
-        if (sal[i][0] >= 0 &&sal[i][0]<=5000)
-        {/*No need to check unlucky employee here*/
-            
+        if (sal[i][0] >= 0 && sal[i][0] <= 5000)
+        { /*No need to check unlucky employee here*/
+            ;
         }
-        
-
+        else if (sal[i][0] >= 5001 && sal[i][0] <= 10000)
+        {
+            markIfUnlucky(sal, numEps, lucky, 5001, i);
+        }
+        else if (sal[i][0] >= 10001 && sal[i][0] <= 20000)
+        {
+            marIfUnlucky(sal, numEps, lucky, 10001, i);
+        }
+        else if (sal[i][0] >= 20001)
+        {
+            markIfUnlucky(sal, numEps, lucky, 20001, i);
+        }
     }
-    
 }
