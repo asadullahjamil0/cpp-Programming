@@ -5,7 +5,7 @@ using namespace std;
 void getInput(double sal[][2], int numEmps);
 void calNetSal(double sal[][2], int numEmps);
 void findUnluckies(double sal[][2], int numEmps, int lucky[]);
-void markIfunlucky(double sal[][2], int numEmps, int lucky[], int upperBound, int empNbr);
+void markIfUnlucky(double sal[][2], int numEmps, int lucky[], int upperBound, int empNbr);
 void printUnluckies(int lucky[], int numEmps);
 
 int main(void)
@@ -36,7 +36,7 @@ int main(void)
 
 void getInput(double sal[][2], int numEmps)
 {
-    for (i = 0; i < numEmps; i++)
+    for (int i = 0; i < numEmps; i++)
     {
         cin >> sal[i][0];
     }
@@ -88,7 +88,7 @@ void findUnluckies(double sal[][2], int numEmps, int luck[])
         }
         else if (sal[i][0] >= 10001 && sal[i][0] <= 20000)
         {
-            marIfUnlucky(sal, numEmps, lucky, 10001, i);
+            markIfUnlucky(sal, numEmps, lucky, 10001, i);
         }
         else if (sal[i][0] >= 20001)
         {
@@ -97,7 +97,7 @@ void findUnluckies(double sal[][2], int numEmps, int luck[])
     }
 }
 
-void markIfunlucky(double sal[][2], int numEmps, int lucky[], int upperBound, int empNbr)
+void markIfUnlucky(double sal[][2], int numEmps, int lucky[], int upperBound, int empNbr)
 {
     for (int i = 0; i < numEmps; i++)
     {
