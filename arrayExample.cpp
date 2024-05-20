@@ -29,6 +29,9 @@ int main(void)
     // Find the unlucky employees
     cout << "\n\n Loading the unlucky employee...";
     findUnluckies(sal, numEmps, lucky);
+    // Print the unlucky employee numbers
+    cout << "\n\n Printing the unlucky employees...";
+    printUnluckies(lucky, numEmps);
 }
 
 void getInput(double sal[][2], int numEmps)
