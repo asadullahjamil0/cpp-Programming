@@ -2,9 +2,10 @@
 
 using namespace std;
 
-void getInput(double sal[][2], int numEps);
-void calNetSal(double sal[][2], int numEps);
-void findUnluckies(double sal[][2], int numEps, int lucky[]);
+void getInput(double sal[][2], int numEmps);
+void calNetSal(double sal[][2], int numEmps);
+void findUnluckies(double sal[][2], int numEmps, int lucky[]);
+
 
 int main()
 {
@@ -26,20 +27,20 @@ int main()
 
     // Find the unlucky employees
     cout << "\n\n Loading the unlucky employee...";
-    findUnluckies(sal, numEps, lucky);
+    findUnluckies(sal, numEmps, lucky);
 }
 
-void getInput(double sal[][2], int numEps)
+void getInput(double sal[][2], int numEmps)
 {
-    for (i = 0; i < numEps; i++)
+    for (i = 0; i < numEmps; i++)
     {
         cin >> sal[i][0];
     }
 }
 
-void calNetSal(double sal[][2], int numEps)
+void calNetSal(double sal[][2], int numEmps)
 {
-    for (int i = 0; i < numEps; i++) /*this numEps is local to this function*/
+    for (int i = 0; i < numEmps; i++) /*this numEmps is local to this function*/
     {
 
         if (sal[i][0] >= 0 && sal[i][0] <= 5000)
@@ -69,9 +70,9 @@ void calNetSal(double sal[][2], int numEps)
     }
 }
 
-void findUnluckies(double sal[][2], int numEps, int luck[]);
+void findUnluckies(double sal[][2], int numEmps, int luck[]);
 {
-    for (int i = 0; i < numEps; i++)
+    for (int i = 0; i < numEmps; i++)
     {
         if (sal[i][0] >= 0 && sal[i][0] <= 5000)
         { /*No need to check unlucky employee here*/
@@ -79,15 +80,15 @@ void findUnluckies(double sal[][2], int numEps, int luck[]);
         }
         else if (sal[i][0] >= 5001 && sal[i][0] <= 10000)
         {
-            markIfUnlucky(sal, numEps, lucky, 5001, i);
+            markIfUnlucky(sal, numEmps, lucky, 5001, i);
         }
         else if (sal[i][0] >= 10001 && sal[i][0] <= 20000)
         {
-            marIfUnlucky(sal, numEps, lucky, 10001, i);
+            marIfUnlucky(sal, numEmps, lucky, 10001, i);
         }
         else if (sal[i][0] >= 20001)
         {
-            markIfUnlucky(sal, numEps, lucky, 20001, i);
+            markIfUnlucky(sal, numEmps, lucky, 20001, i);
         }
     }
 }
