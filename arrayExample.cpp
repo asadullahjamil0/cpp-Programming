@@ -4,7 +4,7 @@ using namespace std;
 
 void getInput(double sal[][2], int numEps);
 void calNetSal(double sal[][2], int numEps);
-void findUnluckies(double sal[][2],int numEps,int lucky[]);
+void findUnluckies(double sal[][2], int numEps, int lucky[]);
 
 int main()
 {
@@ -35,31 +35,46 @@ void getInput(double sal[][2], int numEps)
 
 void calNetSal(double sal[][2], int numEps)
 {
-    if (sal[i][0] >= 0 && sal[i][0] <= 5000)
-    { /*There is no tax deduction*/
-        sal[i][1] = sal[i][0];
-    }
-    else if (sal[i][0] >= 5001 && sal[i][0] <= 10000)
-    { /*There will be 5 % tax deduction*/
-
-        sal[i][1] = sal[i][0] - (0.05 * (sal[i][0]));
-    }
-    else if (sal[i][0] >= 10001 && sal[i][0] <= 20000)
-    { /*There will be 10 % tax deduction*/
-
-        sal[i][1] = sal[i][0] - (0.10 * (sal[i][0]));
-    }
-    else if (sal[i][0] >= 20001)
-    { /*There will be 15 % tax deduction*/
-        sal[i][1] = sal[i][0] - (0.15 * (sal[i][0]));
-    }
-    else
+    for (int i = 0; i < numEps; i++) /*this numEps is local to this function*/
     {
-        /*Nothing to do here*/
+
+        if (sal[i][0] >= 0 && sal[i][0] <= 5000)
+        { /*There is no tax deduction*/
+
+            sal[i][1] = sal[i][0];
+        }
+        else if (sal[i][0] >= 5001 && sal[i][0] <= 10000)
+        { /*There will be 5 % tax deduction*/
+
+            sal[i][1] = sal[i][0] - (0.05 * (sal[i][0]));
+        }
+        else if (sal[i][0] >= 10001 && sal[i][0] <= 20000)
+        { /*There will be 10 % tax deduction*/
+
+            sal[i][1] = sal[i][0] - (0.10 * (sal[i][0]));
+        }
+        else if (sal[i][0] >= 20001)
+        { /*There will be 15 % tax deduction*/
+
+            sal[i][1] = sal[i][0] - (0.15 * (sal[i][0]));
+        }
+        else
+        {
+            /*Nothing to do here*/
+        }
     }
 }
 
-void findUnluckies(double sal[][2],int numEps,int luck[]);
+void findUnluckies(double sal[][2], int numEps, int luck[]);
 {
+    for (int i = 0; i < numEps; i++)
+    {
+        if (sal[i][0] >= 0 &&sal[i][0]<=5000)
+        {/*No need to check unlucky employee here*/
+            
+        }
+        
 
+    }
+    
 }
