@@ -18,7 +18,7 @@ int main(void)
     // Read the number of employees
     cout << "Enter the number of employees in the company: ";
     cin >> numEmps;
-    cout << '/n';
+    cout << '\n';
     // Read the gross salaries of employees into the array 'sal'
     getInput(sal, numEmps);
 
@@ -36,8 +36,9 @@ int main(void)
 
 void getInput(double sal[][2], int numEmps)
 {
-    for (int i = 0; i < numEmps; i++)
+    for (int i = 0; i < numEmps; i++)/*numEmps local for this function*/
     {
+        cout<<"\n Please enter the gross salary for employee no."<<i<<": ";
         cin >> sal[i][0];
     }
 }
@@ -74,7 +75,7 @@ void calNetSal(double sal[][2], int numEmps)
     }
 }
 
-void findUnluckies(double sal[][2], int numEmps, int luck[])
+void findUnluckies(double sal[][2], int numEmps, int lucky[])
 {
     for (int i = 0; i < numEmps; i++)
     {
