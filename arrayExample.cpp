@@ -5,9 +5,10 @@ using namespace std;
 void getInput(double sal[][2], int numEmps);
 void calNetSal(double sal[][2], int numEmps);
 void findUnluckies(double sal[][2], int numEmps, int lucky[]);
+void markIfunlucky(double sal[][2], int numEmps, int lucky[], int upperBound, int empNbr);
+void printUnluckies(int lucky[], int numEmps);
 
-
-int main()
+int main(void)
 {
     const int arraySize = 100;
     double sal[arraySize][2];
@@ -70,7 +71,7 @@ void calNetSal(double sal[][2], int numEmps)
     }
 }
 
-void findUnluckies(double sal[][2], int numEmps, int luck[]);
+void findUnluckies(double sal[][2], int numEmps, int luck[])
 {
     for (int i = 0; i < numEmps; i++)
     {
@@ -89,6 +90,29 @@ void findUnluckies(double sal[][2], int numEmps, int luck[]);
         else if (sal[i][0] >= 20001)
         {
             markIfUnlucky(sal, numEmps, lucky, 20001, i);
+        }
+    }
+}
+
+void markIfunlucky(double sal[][2], int numEmps, int lucky[], int upperBound, int empNbr)
+{
+    for (int i = 0; i < numEmps; i++)
+    {
+        /* See if the condition below, it will mark the employee unlucky even if an employee in the getting the same amount of net salary as that of a person in the lower tax bracke */
+        if (sal[i][0] < upperBound && sal[i][1] >= sal[empNbr][1])
+        {
+            lucky[empNbr] = 1; /*Employee marked as lucky break*/
+        }
+    }
+}
+
+void printUnluckies(int lucky[], int numEmps)
+{
+    for (int i = 0; i < numEmps; i++)
+    {
+        if (lucky[i] == 1)
+        {
+            cout << "\n Employee No.: " << i;
         }
     }
 }
