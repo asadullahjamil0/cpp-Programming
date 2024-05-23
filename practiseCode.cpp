@@ -1,5 +1,8 @@
+// This is just simple example of some basic code 
+
 #include<iostream>
 using namespace std;
+
 
 int main() {
 	string weather, restaurant, ticket;
