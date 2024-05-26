@@ -20,7 +20,7 @@ int main()
     // Finding address by for loop
     for (int i = 0; i < 10; i++)
     {
-        cout << "The address of element at position: " << i << " " << yptr << endl;
+        cout << "The value of element at position: " << i << " " << *yptr << endl;
         yptr++;
     }
 }
