@@ -8,11 +8,11 @@ int main()
 
     cout << "Please enter the pennies: ";
     cin >> penny;
-    cout << "Please enter the nickel: ";
+    cout << "Please enter the nickels: ";
     cin >> nickel;
-    cout << "Please enter the dime: ";
+    cout << "Please enter the dimes: ";
     cin >> dime;
-    cout << "Please enter the quarter: ";
+    cout << "Please enter the quarters: ";
     cin >> quarter;
 
     total = (penny * 0.01) + (nickel * 0.05) + (dime * 0.1) + (quarter * 0.25);
