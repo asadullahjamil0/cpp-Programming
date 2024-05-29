@@ -26,5 +26,13 @@ int main()
         }
         cout << endl;
     }
+
+    // Array manipulation using pointer
+    cout << "\n Array manipulation using pointer is: \n";
+    for (int k = 0; k < 50; k++, ptr++)
+    {
+        cout << *ptr << '\t';
+    }
+
     return 0;
 }
