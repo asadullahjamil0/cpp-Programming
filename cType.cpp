@@ -5,6 +5,7 @@
 using namespace std;
 int main()
 {
+    // Declaring variables to store data
     char c;
     int i = 0, lc = 0, uc = 0, dig = 0, wc = 0, pun = 0, oth = 0;
     cout << "Please enter a character string and then press ENTER: ";
