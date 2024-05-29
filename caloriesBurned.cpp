@@ -7,7 +7,7 @@ int main()
     float caloriesBurned;
     float caloriesPerMinute = 3.9;
     // Added for loop
-    for (int i = 10; i < 30; i += 5)
+    for (int i = 10; i <= 30; i += 5)
 
     {
         caloriesBurned = i * caloriesPerMinute;
