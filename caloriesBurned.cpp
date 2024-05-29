@@ -3,8 +3,9 @@
 using namespace std;
 int main()
 {
+    // Declared data type
     float caloriesBurned;
-
+    // Added for loop 
     for (int i = 10; i < 30; i += 5)
 
     {
