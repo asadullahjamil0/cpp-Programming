@@ -10,21 +10,20 @@ int main()
 
     // Get the first number for reverse
     digit = number % 10;
-    cout << "The digits are " << digit;
+    cout << "The digits are " << digit<<",";
 
     number = number / 10;
 
     // Get the second number for reverse
     digit = number % 10;
-    cout << digit ;
+    cout << digit << ",";
 
     number = number / 10;
     // Get the remaining two number for reverse
     digit = number % 10;
-    cout << digit ;
-
+    cout << digit << ",";
 
     number = number / 10;
     digit = number % 10;
-    cout <<  digit;
+    cout << digit ;
 }
