@@ -10,7 +10,7 @@ int main()
 
     // Get the first number for reverse
     digit = number % 10;
-    cout << "The digits are " << digit<<",";
+    cout << "The digits are " << digit << ",";
 
     number = number / 10;
 
@@ -25,5 +25,6 @@ int main()
 
     number = number / 10;
     digit = number % 10;
-    cout << digit ;
+    cout << digit;
+    return 0;
 }
