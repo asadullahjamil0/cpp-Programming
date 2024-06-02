@@ -34,3 +34,53 @@ int main()
 
     return 0;
 }
+
+void readArray(int arr[])
+{
+    for (int i = 0; i < arraySize; ++i)
+    {
+        cin >> arr[i];
+    }
+}
+
+void displayArray(int arr[])
+{
+    for (int i = 0; i < arraySize; ++i)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int sumOfElements(int arr[])
+{
+    int sum = 0;
+    for (int i = 0; i < arraySize; ++i)
+    {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+int findMaximum(int arr[])
+{
+    int max = arr[0];
+    for (int i = 1; i < arraySize; ++i)
+    {
+        if (arr[i] > max)
+        {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+void reverseArray(int arr[])
+{
+    for (int i = 0; i < arraySize / 2; ++i)
+    {
+        int temp = arr[i];
+        arr[i] = arr[arraySize - i - 1];
+        arr[arraySize - i - 1] = temp;
+    }
+}
