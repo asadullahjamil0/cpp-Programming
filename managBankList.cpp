@@ -30,7 +30,7 @@ public:
 
     // Method to display balance
     void display_balance() const {
-        std::cout << "Current balance: " << balance << std::endl;
+        std::cout << "Current balance is: " << balance << std::endl;
     }
 };
 
