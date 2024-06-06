@@ -8,7 +8,7 @@ public:
     // Constructor
     BankAccount(double initial_balance) : balance(initial_balance) {}
 
-    // Method to deposit money
+    // Method to deposit money in bank
     void deposit(double amount) {
         if (amount > 0) {
             balance += amount;
