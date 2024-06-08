@@ -1,5 +1,6 @@
 #include <iostream>
 
+// This is just a simple calculator
 int main() {
     double num1, num2;
     char op;
