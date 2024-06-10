@@ -1,3 +1,4 @@
+// A simple distance calculator
 #include <iostream>
 
 using namespace std;
@@ -27,7 +28,7 @@ int main()
     for (int i = 1; i <= time; i++)
     {
         distance = speed * i;
-        cout << i << "\t\t" << distance<<endl;
+        cout << i << "\t\t" << distance << endl;
     }
 
     return 0;
