@@ -1,3 +1,4 @@
+// This is just a simple salary calculator
 #include <iostream>
 
 using namespace std;
