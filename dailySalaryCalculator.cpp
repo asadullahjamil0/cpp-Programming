@@ -1,3 +1,5 @@
+// This is simple daily double salary calculator
+
 #include <iostream>
 #include <iomanip>
 
