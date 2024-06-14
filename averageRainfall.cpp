@@ -8,7 +8,7 @@ int main()
     const int MONTH = 12;
     int totalRainfall = 0.0;
     float rainfall = 0.0;
-    float angRainfall = 0.0;
+    float avgRainfall = 0.0;
 
     cout << "Please enter number of years: ";
     cin >> numYears;
