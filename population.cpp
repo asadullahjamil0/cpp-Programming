@@ -35,12 +35,15 @@ int main()
         cin >> avgIncrease;
     }
 
-    for (int i = 1; i < numDays; i++)
+    for (int i = 1; i <= numDays; i++)
     {
+        // Calculate population
 
         dailyPopulation = ((avgIncrease / 100) * startPopulation) + startPopulation;
+        // Display Calculation
 
-        cout << "Population for day " << i <<" is "<<dailyPopulation<<endl;
+        cout << "Population for day " << i << " is " << dailyPopulation << endl;
+        startPopulation = dailyPopulation;
     }
 
     return 0;
