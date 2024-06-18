@@ -8,6 +8,10 @@ private:
     double salary;
 
 public:
+    Teacher()
+    {
+        cout << "Hey I am constructor.\n";
+    }
     // properties / attribbutes
     string name;
     string dept;
@@ -43,6 +47,7 @@ public:
 int main()
 {
     Teacher t1;
+    Teacher t2;
     t1.name = "AsadUllah";
     t1.subject = "C++";
     t1.dept = "Computer Science";
