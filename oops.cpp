@@ -8,9 +8,18 @@ private:
     double salary;
 
 public:
+    // Non-parameterized
     Teacher()
     {
         dept = "Computer Science\n";
+    }
+    // Parameterized
+    Teacher(string n, string d, string s, double sal)
+    {
+        name = n;
+        dept = d;
+        subject = s;
+        salary = sal;
     }
     // properties / attribbutes
     string name;
@@ -22,14 +31,10 @@ public:
     {
         dept = newDept;
     }
-
-    void setSalary(double s)
+    void getInfo()
     {
-        salary = s;
-    }
-    double getSalary()
-    {
-        return salary;
+        cout << "Name: " << name << endl;
+        cout << "Subject: " << subject << endl;
     }
 };
 
@@ -46,12 +51,8 @@ public:
 
 int main()
 {
-    Teacher t1;
-    t1.name = "AsadUllah";
-    t1.subject = "C++";
-    t1.setSalary(75000);
+    Teacher t1("AsadUllah", "Computer Science", "C++", 75000);
 
-    cout << t1.dept << endl;
-    cout << "Salary: " << t1.getSalary() << endl;
+    t1.getInfo();
     return 0;
 }
