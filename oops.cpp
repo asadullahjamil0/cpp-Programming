@@ -8,11 +8,6 @@ private:
     double salary;
 
 public:
-    // Non-parameterized
-    Teacher()
-    {
-        dept = "Computer Science\n";
-    }
     // Parameterized
     Teacher(string n, string d, string s, double sal)
     {
@@ -20,6 +15,15 @@ public:
         dept = d;
         subject = s;
         salary = sal;
+    }
+
+    Teacher(Teacher &orgObj)
+    {
+        cout << "I am custom copy constructor...." << endl;
+        this->name = orgObj.name;
+        this->dept = orgObj.dept;
+        this->subject = orgObj.subject;
+        this->salary = orgObj.salary;
     }
     // properties / attribbutes
     string name;
