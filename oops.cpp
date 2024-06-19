@@ -34,6 +34,7 @@ public:
     void getInfo()
     {
         cout << "Name: " << name << endl;
+        cout << "Department: " << dept << endl;
         cout << "Subject: " << subject << endl;
     }
 };
