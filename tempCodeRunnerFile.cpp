@@ -1,4 +1,1 @@
-Teacher()
-    {
-        dept = "Computer Science\n";
-    }
+Teacher
