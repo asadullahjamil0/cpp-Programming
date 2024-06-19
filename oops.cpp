@@ -54,6 +54,8 @@ int main()
 {
     Teacher t1("AsadUllah", "Computer Science", "C++", 75000);
 
-    t1.getInfo();
+    Teacher t2(t1);
+    // t1.getInfo();
+    t2.getInfo();
     return 0;
 }
