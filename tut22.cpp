@@ -4,6 +4,8 @@ using namespace std;
 
 class binary
 {
+private:
+
     string s;
 
 public:
@@ -31,6 +33,8 @@ void binary::chk_bin(void)
 }
 void binary::one_compliment(void)
 {
+    // We can also declare function here instead of declaring in main function
+    // chk_bin();
     for (int i = 0; i < s.length(); i++)
     {
         if (s.at(i) == '0')
@@ -45,7 +49,7 @@ void binary::one_compliment(void)
 }
 void binary::display(void)
 {
-    cout << "Displaying your binary number: "<<endl;
+    cout << "Displaying your binary number: " << endl;
     for (int i = 0; i < s.length(); i++)
     {
         cout << s.at(i);
