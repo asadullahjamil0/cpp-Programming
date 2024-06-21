@@ -34,7 +34,7 @@ void binary::chk_bin(void)
 void binary::one_compliment(void)
 {
     // We can also declare function here instead of declaring in main function
-    // chk_bin();
+    chk_bin();
     for (int i = 0; i < s.length(); i++)
     {
         if (s.at(i) == '0')
@@ -63,7 +63,7 @@ int main()
 
     binary b;
     b.read();
-    b.chk_bin();
+    // b.chk_bin();
     b.display();
     b.one_compliment();
     b.display();
