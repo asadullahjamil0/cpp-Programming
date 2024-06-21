@@ -3,27 +3,18 @@
 #include <vector>
 using namespace std;
 
-namespace S1
-{
-    int A = 1;
-}
-namespace S2
-{
-    int A = 2;
-}
 
+string replicate(string s = "x", int r = 1){
+    string t ;
+    while (r--)
+    {
+        t += s;
+    }
+    return t;
+}
 int main()
 {
-    {
-        using namespace S1;
-        S2::A = A + 1;
-    }
-    {
-        using namespace S2;
-        S1::A = A + 1;
-    }
-
-    cout << S1::A = A + 1;
-
+    string pattern = "a";
+    cout << replicate(pattern);
     return 0;
 }
