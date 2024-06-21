@@ -5,7 +5,6 @@ using namespace std;
 class binary
 {
 private:
-
     string s;
 
 public:
