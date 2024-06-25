@@ -1,22 +1,16 @@
-
 #include <iostream>
 using namespace std;
-    
-class A { 
-public:
-    A() : val(0) {}
-    int val;
-    void inc() { ++val; } 
+struct S {
+    int  a;
+    char b;
+    struct {
+            float a;
+            int   b;
+    } c;
 };
-    
-void Do(A a) {
-    a.inc();
+int main (int argc, const char *argv[])
+{
+    S s = { 1, 2, 3, 4 };
+    cout << s.c.a << s.c.b;
 }
-    
-int main() {
-    A a;
-    Do(a);
-    a.inc();
-    cout << a.val;
-    return 0;
-}
+
