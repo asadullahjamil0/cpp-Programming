@@ -13,6 +13,12 @@ public:
         data2 = b;
         data3 = c;
     }
+    Simple(int a, bool)
+    {
+        data1 = a;
+        data2 = 0;
+        data3 = 0;
+    }
     void printData();
 };
 void Simple ::printData()
@@ -21,8 +27,14 @@ void Simple ::printData()
 }
 int main()
 {
-    Simple s(1);
-    s.printData();
+    Simple s1(2, true);
+    s1.printData();
+
+    Simple s2(1, 5, 7);
+    s2.printData();
+
+    Simple s3(3, 6);
+    s3.printData();
 
     return 0;
 }
