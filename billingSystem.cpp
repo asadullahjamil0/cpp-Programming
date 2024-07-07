@@ -39,8 +39,54 @@ public:
         return Quantity;
     }
 };
+
+addItem(Bill b)
+{
+    bool close = false;
+    while (!close)
+    {
+        int choice;
+        cout << "\t1.Add." << endl;
+        cout << "\t2.Close." << endl;
+        cout << "\tEnter Choice: " << endl;
+        cin >> choice;
+        if (choice == 1)
+        {
+            string item;
+            int rate, quant;
+
+            cout << "\tEnter Item Name: ";
+            cin >> item;
+            b.setItem(item);
+
+            cout << "\tEnter Rate of item: ";
+            cin >> rate;
+            b.setRate(rate);
+
+            cout << "\tEnter Quantity of item: ";
+            cin >> quant;
+            b.setQuantity(quant);
+        }
+    }
+}
 int main()
 {
+    Bill b;
+    bool exit = false;
+    while (!exit)
+    {
+        system("cls");
+        int val;
+        cout << "\tWelcome to Super Market Bill System" << endl;
+        cout << "\t\t1.Add Item." << endl;
+        cout << "\t\t2.Print Bill." << endl;
+        cout << "\t\t3.Exit." << endl;
+        cout << "\t\tEnter Choice: " << endl;
+        cin >> val;
+        if (val == 1)
+        {
+        }
+    }
 
     return 0;
 }
