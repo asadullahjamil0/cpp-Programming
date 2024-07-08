@@ -108,7 +108,9 @@ int main()
         cin >> val;
         if (val == 1)
         {
+            system("cls");
             addItem(b);
+            Sleep(3000);
         }
 
         else if (val == 3)
