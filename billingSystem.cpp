@@ -11,16 +11,16 @@ private:
     int Rate, Quantity;
 
 public:
-    Bill : Item(""), Rate(0), Quantity(0) {}
-    void setItem(item)
+    Bill() : Item(""), Rate(0), Quantity(0) {}
+    void setItem(string item)
     {
         Item = item;
     }
-    void setRate(rate)
+    void setRate(int rate)
     {
         Rate = rate;
     }
-    void setQuantity(quant)
+    void setQuantity(int quant)
     {
         Quantity = quant;
     }
@@ -66,6 +66,8 @@ addItem(Bill b)
             cout << "\tEnter Quantity of item: ";
             cin >> quant;
             b.setQuantity(quant);
+
+            ofstream out("D:/New folder (2)/Bill.txt",ios::app);
         }
     }
 }
