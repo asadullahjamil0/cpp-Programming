@@ -52,6 +52,7 @@ addItem(Bill b)
         cin >> choice;
         if (choice == 1)
         {
+            system("cls");
             string item;
             int rate, quant;
 
@@ -67,7 +68,26 @@ addItem(Bill b)
             cin >> quant;
             b.setQuantity(quant);
 
-            ofstream out("D:/New folder (2)/Bill.txt",ios::app);
+            ofstream out("D:/New folder (2)/Bill.txt", ios::app);
+            if (!out)
+            {
+                cout << "\tError: File can't open!" << endl;
+            }
+            else
+            {
+                out << "\t" << b.getItem() << " : " << b.getRate() << " : " << b.getQuant() << endl
+                    << endl;
+            }
+            out.close();
+            cout << "Item added successfuly" << endl;
+            Sleep(3000);
+        }
+        else if (choice == 2)
+        {
+            system("cls");
+            close = true;
+            cout << "\tBack to Main Menu" << endl;
+            Sleep(3000);
         }
     }
 }
@@ -80,6 +100,7 @@ int main()
         system("cls");
         int val;
         cout << "\tWelcome to Super Market Bill System" << endl;
+        cout << "\t***********************************" << endl;
         cout << "\t\t1.Add Item." << endl;
         cout << "\t\t2.Print Bill." << endl;
         cout << "\t\t3.Exit." << endl;
@@ -87,6 +108,14 @@ int main()
         cin >> val;
         if (val == 1)
         {
+            addItem(b);
+        }
+
+        else if (val == 3)
+        {
+            exit = true;
+            cout << "Exiting..." << endl;
+            Sleep(2000);
         }
     }
 
