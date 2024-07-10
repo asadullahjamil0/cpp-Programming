@@ -92,7 +92,7 @@ addItem(Bill b)
     }
 }
 
-printBill(Bill b)
+printBill()
 {
     system("cls");
     int count = 0;
@@ -102,8 +102,8 @@ printBill(Bill b)
         system("cls");
         int choice;
         cout << "\t1.Add Bill." << endl;
-        cout << "\t1.Close Session." << endl;
-        cout << "\t1.Enter Choice." << endl;
+        cout << "\t2.Close Session." << endl;
+        cout << "\t3.Enter Choice." << endl;
         cin >> choice;
 
         if (choice == 1)
@@ -133,7 +133,7 @@ printBill(Bill b)
                 if (item == itemName)
                 {
                     found = true;
-                    if (quant == itemQuant)
+                    if (quant <= itemQuant)
                     {
                         int amount = itemRate * quant;
                         cout << "\t Item | Rate | Quantity | Amount" << endl;
@@ -142,20 +142,42 @@ printBill(Bill b)
                         itemQuant = newQuant;
                         count += amount;
 
-                        out<<"\t"<<itemName<<" : "<<itemRate<<" : "<<itemQuant<<endl<<endl;
+                        out << "\t" << itemName << " : " << itemRate << " : " << itemQuant << endl
+                            << endl;
                     }
                     else
                     {
-                        // Not quantity
+                        cout << "\tSorry, " << item << " Ended!" << endl;
                     }
                 }
                 else
                 {
-                    // not item found
+                    out << line << endl;
                 }
             }
+            if (!found)
+            {
+                cout << "\tItem Not Available!" << endl;
+            }
+            out.close();
+            in.close();
+            remove("D:/New folder (2)/Bill.txt");
+            rename("D:/New folder (2)/Bill Temp.txt", "D:/New folder (2)/Bill.txt");
         }
+        else if (choice == 2)
+        {
+            close = true;
+            cout << "\tCounting Total Bill" << endl;
+        }
+        Sleep(3000);
     }
+    system("cls");
+    cout << endl
+         << endl;
+    cout << "\tTotal Bill --------------------: " << count << endl
+         << endl;
+    cout << "\tThanks for shopping!" << endl;
+    Sleep(5000);
 }
 int main()
 {
@@ -180,12 +202,14 @@ int main()
         }
         else if (val == 2)
         {
+            printBill();
         }
 
         else if (val == 3)
         {
+            system("cls");
             exit = true;
-            cout << "Exiting..." << endl;
+            cout << "\tGood luck! Exiting..." << endl;
             Sleep(2000);
         }
     }
