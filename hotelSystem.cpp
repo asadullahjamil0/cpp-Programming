@@ -5,7 +5,6 @@
 #include <string>
 using namespace std;
 
-
 class Hostel
 {
 private:
@@ -32,12 +31,42 @@ public:
     {
         return Bed;
     }
+    reserve()
+    {
+        ifstream in("D:/New folder (2)/address.txt");
+        ofstream out("D:/New folder (2)/address Temp.txt");
+
+        string line;
+        while (getline(in, line))
+        {
+            int pos = line.find("3star");
+            if (pos != string::npos)
+            {
+                int bed = Bed - 1;
+                Bed = bed;
+
+                stringstream ss;
+                ss << bed;
+                string strBed = ss.str();
+
+                int bedPos = line.find_last_not_of(':');
+                line.replace(bedPos + 1, string::npos, strBed);
+            }
+            out << line << endl;
+        }
+        out.close();
+        in.close();
+        remove("D:/New folder (2)/address.txt");
+        rename("D:/New folder (2)/address Temp.txt", "D:/New folder (2)/address.txt");
+
+        cout << "\tBed reserved successfully!" << endl;
+    }
 };
 
 class Student
 {
 private:
-    string Name,RollNo, Address;
+    string Name, RollNo, Address;
 
 public:
     Student() : Name(""), RollNo(""), Address("") {};
@@ -71,6 +100,12 @@ public:
 int main()
 {
     Hostel h("3star", 5000, 2);
+    ofstream out("D:/New folder (2)/address.txt");
+    out << "\t" << h.getName() << " : " << h.getRent() << " : " << h.getBed() << endl
+        << endl;
+    cout << "Hostel Data Saved" << endl;
+    out.close();
+
     Student s;
     bool exit = false;
     while (!exit)
@@ -99,6 +134,28 @@ int main()
             cout << "\tEnter Address of Student: ";
             cin >> address;
             s.setAddress(address);
+
+            if (h.getBed() > 0)
+            {
+                h.reserve();
+            }
+            else if (h.getBed() == 0)
+            {
+                cout << "\tSorry, Bed is not available" << endl;
+            }
+
+            ofstream outFile("D:/New folder (2)/student.txt", ios::app);
+            outFile << "\t" << s.getName() << " : " << s.getRollNo() << " : " << s.getAddress() << endl
+                    << endl;
+            Sleep(5000);
+        }
+
+        else if (val == 2)
+        {
+            system("cls");
+            exit = true;
+            cout << "Good Luck!" << endl;
+            Sleep(3000);
         }
     }
 
