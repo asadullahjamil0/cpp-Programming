@@ -10,14 +10,14 @@ int main()
 
         for (int j = 1; j <= m; j++)
         {
-            if (i == 1 || i == n || j == 1 || j == m)
+            if ((i + j) % 2 == 0)
             {
 
-                cout << j;
+                cout << 1;
             }
             else
             {
-                cout << " ";
+                cout << 2;
             }
         }
 
