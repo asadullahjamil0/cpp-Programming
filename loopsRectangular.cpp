@@ -2,15 +2,25 @@
 using namespace std;
 int main()
 {
-    int n;
+    int n, m;
     cout << "Please enter the value of n and m" << endl;
-    cin >> n;
+    cin >> n >> m;
     for (int i = 1; i <= n; i++)
     {
-        for (int j = 1; j <= n; j++)
+
+        for (int j = 1; j <= m; j++)
         {
-            cout << j;
+            if (i == 1 || i == n || j == 1 || j == m)
+            {
+
+                cout << j;
+            }
+            else
+            {
+                cout << " ";
+            }
         }
+
         cout << endl;
     }
 
