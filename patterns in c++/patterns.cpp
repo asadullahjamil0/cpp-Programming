@@ -210,26 +210,39 @@ int main()
     // Buttefly Pattern
     // top part
 
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < i + 1; j++)
-        {
+
+
+    // Upper half
+    for (int i = 0; i < n; i++) {
+        // Left half of the butterfly
+        for (int j = 0; j <= i; j++) {
             cout << "*";
         }
-        for (int j = 0; j < n - i - 1; j++)
-        {
+        // Spaces in the middle
+        for (int j = 0; j < 2 * (n - i - 1); j++) {
             cout << " ";
         }
-
-        // for (int j = 0; j < i; j++)
-        // {
-        //     cout << " ";
-        // }
-        for (int j = i + 1; j > 0; j--)
-        {
+        // Right half of the butterfly
+        for (int j = 0; j <= i; j++) {
             cout << "*";
         }
+        cout << endl;
+    }
 
+    // Lower half
+    for (int i = n - 1; i >= 0; i--) {
+        // Left half of the butterfly
+        for (int j = 0; j <= i; j++) {
+            cout << "*";
+        }
+        // Spaces in the middle
+        for (int j = 0; j < 2 * (n - i - 1); j++) {
+            cout << " ";
+        }
+        // Right half of the butterfly
+        for (int j = 0; j <= i; j++) {
+            cout << "*";
+        }
         cout << endl;
     }
 
