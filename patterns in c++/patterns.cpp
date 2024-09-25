@@ -107,16 +107,47 @@ int main()
     // }
 
     // for character
-    char ch = 'A';
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = i + 1; j > 0; j--)
-        {
-            cout << ch << " ";
-            ch++;
-        }
-        cout << endl;
-    }
+    // char ch = 'A';
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int j = i + 1; j > 0; j--)
+    //     {
+    //         cout << ch << " ";
+    //         ch++;
+    //     }
+    //     cout << endl;
+    // }
+
+    // for reverse traingle
+    // for number
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int j = 0; j < i; j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     for (int j = 0; j < n - i; j++)
+    //     {
+    //         cout << i + 1;
+    //     }
+    //     cout << endl;
+    // }
+
+    // for character of inverted triangle
+    // char ch = 'A';
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int j = 0; j < i; j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     for (int j = 0; j < n - i; j++)
+    //     {
+    //         cout << ch;
+    //     }
+    //     cout << endl;
+    //     ch++;
+    // }
 
     return 0;
 }
