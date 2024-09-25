@@ -150,7 +150,6 @@ int main()
     // }
 
     // pyramid pattern
-    // for numbers
     // for (int i = 0; i < n; i++)
     // {
     //     for (int j = 0; j < n - i - 1; j++)
@@ -170,41 +169,67 @@ int main()
 
     // Hollow diamond pattern
     // Top part
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int j = 0; j < n - i - 1; j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     cout << "*";
+    //     if (i != 0)
+    //     {
+    //         for (int j = 0; j < 2 * i - 1; j++)
+    //         {
+    //             cout << " ";
+    //         }
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+    // }
+
+    // bottom part
+    // for (int i = 0; i < n - 1; i++)
+    // {
+    //     for (int j = 0; j < i + 1; j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     cout << "*";
+
+    //     if (i != n - 2)
+    //     {
+    //         for (int j = 0; j < 2 * (n - i) - 5; j++)
+    //         {
+    //             cout << " ";
+    //         }
+    //         cout << "*";
+    //     }
+    //     cout << endl;
+    // }
+
+    // Buttefly Pattern
+    // top part
+
     for (int i = 0; i < n; i++)
     {
+        for (int j = 0; j < i + 1; j++)
+        {
+            cout << "*";
+        }
         for (int j = 0; j < n - i - 1; j++)
         {
             cout << " ";
         }
-        cout << "*";
-        if (i != 0)
+
+        // for (int j = 0; j < i; j++)
+        // {
+        //     cout << " ";
+        // }
+        for (int j = i + 1; j > 0; j--)
         {
-            for (int j = 0; j < 2 * i - 1; j++)
-            {
-                cout << " ";
-            }
             cout << "*";
         }
-        cout << endl;
-    }
 
-    // bottom part
-    for (int i = 0; i < n - 1; i++)
-    {
-        for (int j = 0; j < i + 1; j++)
-        {
-            cout << " ";
-        }
-        cout << "*";
-
-        if (i != n - 2)
-        {
-            for (int j = 0; j < 2 * (n - i) - 5; j++)
-            {
-                cout << " ";
-            }
-            cout << "*";
-        }
         cout << endl;
     }
 
