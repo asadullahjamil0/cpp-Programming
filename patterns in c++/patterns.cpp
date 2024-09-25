@@ -151,19 +151,59 @@ int main()
 
     // pyramid pattern
     // for numbers
+    // for (int i = 0; i < n; i++)
+    // {
+    //     for (int j = 0; j < n - i - 1; j++)
+    //     {
+    //         cout << " ";
+    //     }
+    //     for (int j = 0; j < i + 1; j++)
+    //     {
+    //         cout << j + 1;
+    //     }
+    //     for (int j = 0; j < i; j++)
+    //     {
+    //         cout << j + 1;
+    //     }
+    //     cout << endl;
+    // }
+
+    // Hollow diamond pattern
+    // Top part
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n - i - 1; j++)
         {
             cout << " ";
         }
+        cout << "*";
+        if (i != 0)
+        {
+            for (int j = 0; j < 2 * i - 1; j++)
+            {
+                cout << " ";
+            }
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    // bottom part
+    for (int i = 0; i < n - 1; i++)
+    {
         for (int j = 0; j < i + 1; j++)
         {
-            cout << j + 1;
+            cout << " ";
         }
-        for (int j = 0; j < i; j++)
+        cout << "*";
+
+        if (i != n - 2)
         {
-            cout << j + 1;
+            for (int j = 0; j < 2 * (n - i) - 5; j++)
+            {
+                cout << " ";
+            }
+            cout << "*";
         }
         cout << endl;
     }
