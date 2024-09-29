@@ -18,11 +18,14 @@ int decToBin(int decimalNum)
 
 int main()
 {
-    int decimalNum;
-    cout << "Enter decimal number to add binary number";
-    cin >> decimalNum;
-
-    cout << "Final answer of your number is:" << decToBin(decimalNum) << endl;
+    // int decimalNum;
+    // cout << "Enter decimal number to add binary number";
+    // cin >> decimalNum;
+    // to print more than one binary number
+    for (int i = 1; i <= 10; i++)
+    {
+        cout << "Binary form of number" << i << " is:" << decToBin(i) << endl;
+    }
 
     return 0;
 }
