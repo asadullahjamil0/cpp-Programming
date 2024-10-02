@@ -64,7 +64,7 @@ int main()
         smallest = min(arr[i], smallest);
         largest = max(arr[i], largest);
     }
-    cout << "Smallest number of an arrya is: " << smallest << endl;
+    cout << "Smallest number of an array is: " << smallest << endl;
     cout << "Largest number of an array is: " << largest << endl;
     return 0;
 }
