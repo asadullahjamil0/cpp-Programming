@@ -38,9 +38,9 @@ int main(void)
 
 void getInput(double sal[][2], int numEmps)
 {
-    for (int i = 0; i < numEmps; i++)/*numEmps local for this function*/
+    for (int i = 0; i < numEmps; i++) /*numEmps local for this function*/
     {
-        cout<<"\n Please enter the gross salary for employee no."<<i<<": ";
+        cout <<"\n Please enter the gross salary for employee no." << i << ": ";
         cin >> sal[i][0];
     }
 }
