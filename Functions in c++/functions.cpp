@@ -65,6 +65,7 @@ int main()
 
     // For binomial cofficient nCr
     cout << "Binomial cofficient for your numbers is: " << nCr(6, 3);
+    cout << "Result of another arguments:" << nCr(8, r);
 
     return 0;
 }
