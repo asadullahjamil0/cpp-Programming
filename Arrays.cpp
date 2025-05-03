@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     // array example
-    int marks[4] = {23, 45, 56, 89};
+    int marks[4] = {23, 45, 56, 89, 786};
     int mathMarks[4];
     mathMarks[0] = 234;
     mathMarks[1] = 24563;
@@ -16,6 +16,7 @@ int main()
     cout << mathMarks[1] << endl;
     cout << mathMarks[2] << endl;
     cout << mathMarks[3] << endl;
+    cout << mathMarks[4] << endl;
 
     cout << "these are marks" << endl;
 
